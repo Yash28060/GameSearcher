@@ -25,7 +25,6 @@ function Home() {
   };
   function randomNumberInRange(){
     const randomNo =  Math.floor(Math.random() * 20)
-    console.log("random no " + randomNo);
     return randomNo;
   }
   return (

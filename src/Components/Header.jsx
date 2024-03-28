@@ -9,14 +9,9 @@ function Header() {
   const [toggle, setToggle] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext);
 
-  // here
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
-  useEffect(() => {
-    console.log("theme", theme);
-  }, []);
-  //here
   const handleSearch = async (e) => {
     setSearchQuery(e);
     let allGames = await GlobalApi.getAllGames;
@@ -31,7 +26,7 @@ function Header() {
       console.log("results here" + filteredResults);
     }
   };
-  // here
+  
   return (
     <>
       <div className=" flex items-center p-3">
@@ -54,7 +49,7 @@ function Header() {
               className=" text-[35px] bg-slate-200 text-black cursor-pointer rounded-full p-2"
               onClick={() => {
                 setTheme("light");
-                localStorage.setItme("theme", "light");
+                localStorage.setItem("theme", "light");
               }}
             />
           ) : (

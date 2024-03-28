@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 
 function Banner({ gameBanner }) {
-  useEffect(() => {
-    // console.log("gameBanner", gameBanner);
-  }, []);
+  
 
   return (
     <>
